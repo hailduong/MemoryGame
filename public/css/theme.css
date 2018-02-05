@@ -1,0 +1,26 @@
+.board .card {
+  height: 150px;
+  border: 1px solid #009688;
+  transition: background 0.3s; }
+.board .card:hover {
+  opacity: 0.8; }
+.board .card.laptop {
+  background: #ffcdd2; }
+.board .card.bike {
+  background: #ce93d8; }
+.board .card.mail {
+  background: #7e57c2; }
+.board .card.plant {
+  background: #4caf50; }
+.board .card.flower {
+  background: #2196f3; }
+.board .card.speaker {
+  background: #4db6ac; }
+.board .card.phone {
+  background: #ffca28; }
+.board .card.piano {
+  background: #8d6e63; }
+.board .card.hidden-card {
+  background: #b0bec5 !important; }
+
+/*# sourceMappingURL=theme.css.map */

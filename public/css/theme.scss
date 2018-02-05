@@ -1,0 +1,20 @@
+$primaryColor:#009688;
+
+.board{
+    .card{
+        &{ height:150px; border:1px solid $primaryColor; transition: background 0.3s;}
+
+        &:hover{opacity:0.8}
+        
+        &.laptop{ background:#ffcdd2 }
+        &.bike{ background:#ce93d8 }
+        &.mail{ background:#7e57c2 }
+        &.plant{ background:#4caf50 }
+        &.flower{ background:#2196f3 }
+        &.speaker{ background:#4db6ac }
+        &.phone{ background:#ffca28 }
+        &.piano{ background:#8d6e63 }
+
+        &.hidden-card{ background:#b0bec5 !important; }
+    }
+}
