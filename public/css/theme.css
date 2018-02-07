@@ -269,29 +269,55 @@
 .space-30 {
   margin: 30px 0; }
 
+body {
+  color: #607d8b; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #4caf50;
+  border-color: transparent; }
+
+.btn-default {
+  color: #607d8b;
+  border-color: #607d8b; }
+
+h1 {
+  margin-top: 50px; }
+
+.game__board {
+  border-radius: 20px;
+  overflow: hidden; }
 .game__board .card {
-  height: 150px;
-  border: 1px solid #009688;
-  transition: background 0.3s; }
+  height: 94px;
+  border: 1px solid #fff;
+  transition: background-color 0.3s; }
 .game__board .card:hover {
   opacity: 0.8; }
 .game__board .card.laptop {
-  background: #ffcdd2; }
+  background: #00bcd4; }
 .game__board .card.bike {
-  background: #ce93d8; }
-.game__board .card.mail {
-  background: #7e57c2; }
-.game__board .card.plant {
   background: #4caf50; }
+.game__board .card.mail {
+  background: #8bc34a; }
+.game__board .card.plant {
+  background: #cddc39; }
 .game__board .card.flower {
-  background: #2196f3; }
+  background: #ffeb3b; }
 .game__board .card.speaker {
-  background: #4db6ac; }
+  background: #ffc107; }
 .game__board .card.phone {
-  background: #ffca28; }
+  background: #ff9800; }
 .game__board .card.piano {
-  background: #8d6e63; }
+  background: #ff5722; }
 .game__board .card.hidden-card {
   background: #b0bec5 !important; }
+@media (min-width: 376px) {
+  .game__board {
+    width: 375px;
+    margin: auto;
+    margin-top: 30px; } }
+@media (max-width: 375px) {
+  .game__board .card {
+    height: 94px; } }
 
 /*# sourceMappingURL=theme.css.map */

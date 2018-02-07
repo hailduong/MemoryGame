@@ -205,7 +205,7 @@ var MemoryGame = function () {
 	}, {
 		key: "renderCard",
 		value: function renderCard(card) {
-			return "<div class=\"col-xs-3 card hidden-card " + card + "\" data-name=\"" + card + "\">\n\t\t\t\t\t" + card + "\n\t\t\t\t</div>";
+			return "<div class=\"col-xs-3 card hidden-card " + card + "\" data-name=\"" + card + "\">\n\t\t\t\t\t\n\t\t\t\t</div>";
 		}
 	}, {
 		key: "renderAllCards",

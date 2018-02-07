@@ -1,22 +1,37 @@
 @import "margin-padding";
+$primaryColor:#00804f;
 
-$primaryColor:#009688;
+// General
+body{color:#607d8b}
+.btn-primary{color:#fff; background-color:#4caf50; border-color:transparent;}
+.btn-default{color:#607d8b; border-color:#607d8b}
+h1{ margin-top:50px;}
 
+// Game board
 .game__board{
+    &{border-radius:20px; overflow:hidden}
     .card{
-        &{ height:150px; border:1px solid $primaryColor; transition: background 0.3s;}
+        &{ height:94px; border:1px solid #fff; transition:background-color 0.3s; }
 
-        &:hover{opacity:0.8}
-        
-        &.laptop{ background:#ffcdd2 }
-        &.bike{ background:#ce93d8 }
-        &.mail{ background:#7e57c2 }
-        &.plant{ background:#4caf50 }
-        &.flower{ background:#2196f3 }
-        &.speaker{ background:#4db6ac }
-        &.phone{ background:#ffca28 }
-        &.piano{ background:#8d6e63 }
+        &:hover{ opacity:0.8 }
+
+        &.laptop{ background:#00bcd4 }
+        &.bike{ background:#4caf50 }
+        &.mail{ background:#8bc34a }
+        &.plant{ background:#cddc39 }
+        &.flower{ background:#ffeb3b }
+        &.speaker{ background:#ffc107 }
+        &.phone{ background:#ff9800 }
+        &.piano{ background:#ff5722 }
 
         &.hidden-card{ background:#b0bec5 !important; }
+    }
+
+    @media (min-width:376px) {
+        &{width:375px; margin:auto; margin-top:30px;}
+    }
+    
+    @media (max-width:375px) {
+        .card{ height:94px; }
     }
 }

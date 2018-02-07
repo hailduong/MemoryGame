@@ -99,7 +99,7 @@ class MemoryGame {
 
 	renderCard(card) {
 		return `<div class="col-xs-3 card hidden-card ${card}" data-name="${card}">
-					${card}
+					
 				</div>`
 	}
 
