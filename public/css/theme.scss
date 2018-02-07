@@ -1,6 +1,8 @@
+@import "margin-padding";
+
 $primaryColor:#009688;
 
-.board{
+.game__board{
     .card{
         &{ height:150px; border:1px solid $primaryColor; transition: background 0.3s;}
 

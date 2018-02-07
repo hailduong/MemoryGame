@@ -6,11 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Memory Game</title>
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/animate.css">
     <link rel="stylesheet" href="./public/css/theme.css">
 </head>
 <body>
 <div class="container game">
-    <div class="row board">
+    <h1 class="text-center">Memory Challenge</h1>
+    <div class="text-center">
+        <a class="btn btn-primary m-t m-r" id="btn-start-game">Start Game</a>
+        <a class="btn btn-default m-t hidden" id="btn-restart-game">Restart Game</a>
+    </div>
+    <div class="row m-t-lg m-b">
+        <div class="col-xs-3">
+            <div class="game__number-of-move">
+                <span>Number of moves:</span>
+                <span class="number"></span>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="game__remaining-cards">
+                <span>Remaining cards:</span>
+                <span class="number"></span>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="game__timer">
+                <span>Time:</span>
+                <span class="time"></span>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="game__rating">
+                <span>Rating:</span>
+                <span class="stars"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row game__board">
     </div>
 </div>
 <script src="./public/App.js"></script>
