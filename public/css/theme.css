@@ -284,6 +284,16 @@ body {
 h1 {
   margin-top: 50px; }
 
+.swal-title {
+  color: #607d8b; }
+
+.swal-footer {
+  text-align: center; }
+  .swal-footer .swal-button-container {
+    min-width: 150px; }
+    .swal-footer .swal-button-container button {
+      width: 100%; }
+
 .game__board {
   border-radius: 20px;
   overflow: hidden; }

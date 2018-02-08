@@ -2,14 +2,20 @@
 $primaryColor:#00804f;
 
 // General
-body{color:#607d8b}
-.btn-primary{color:#fff; background-color:#4caf50; border-color:transparent;}
-.btn-default{color:#607d8b; border-color:#607d8b}
-h1{ margin-top:50px;}
+body{ color:#607d8b }
+.btn-primary{ color:#fff; background-color:#4caf50; border-color:transparent; }
+.btn-default{ color:#607d8b; border-color:#607d8b }
+h1{ margin-top:50px; }
+.swal-title{ color:#607d8b }
+.swal-footer{ text-align:center;
+    .swal-button-container{ min-width:150px;
+        button{ width:100% }
+    }
 
+}
 // Game board
 .game__board{
-    &{border-radius:20px; overflow:hidden}
+    &{ border-radius:20px; overflow:hidden }
     .card{
         &{ height:94px; border:1px solid #fff; transition:background-color 0.3s; }
 
@@ -28,9 +34,9 @@ h1{ margin-top:50px;}
     }
 
     @media (min-width:376px) {
-        &{width:375px; margin:auto; margin-top:30px;}
+        &{ width:375px; margin:auto; margin-top:30px; }
     }
-    
+
     @media (max-width:375px) {
         .card{ height:94px; }
     }

@@ -54,15 +54,19 @@ class MemoryGame {
 
 	initButtonRestartGame() {
 		this.$btnRestartGame.click(() => {
-			// Reset the state
-			this.state = Object.assign({}, initialState);
-
-			// Stop the counter
-			clearInterval(this.timerInterval);
-
-			// Start the game again
-			this.startGame();
+			this.restartGame();
 		})
+	}
+
+	restartGame() {
+		// Reset the state
+		this.state = Object.assign({}, initialState);
+
+		// Stop the counter
+		clearInterval(this.timerInterval);
+
+		// Start the game again
+		this.startGame();
 	}
 
 	startTimer() {
@@ -98,8 +102,7 @@ class MemoryGame {
 	}
 
 	renderCard(card) {
-		return `<div class="col-xs-3 card hidden-card ${card}" data-name="${card}">
-					
+		return `<div class="col-xs-3 card hidden-card ${card}" data-name="${card}">				
 				</div>`
 	}
 
@@ -141,6 +144,28 @@ class MemoryGame {
 		this.renderStarRating();
 	}
 
+	showCongratulations() {
+		const {timeLast, stars} = this.state;
+		const alertMessage = `
+							<p>You finished the game in <strong>${timeLast}</strong> with <strong>${stars}</strong> star(s)<br/>
+							Do you want to play again?</p>`;
+
+		const alertContentNode = $(alertMessage)[0];
+
+		swal({
+			title: "Good job!",
+			content: alertContentNode,
+			icon: "success",
+			buttons: ["No", "Play Again!"]
+		}).then((yes) => {
+			if (yes) {
+				this.restartGame();
+			} else {
+				swal.close();
+			}
+		});
+	}
+
 	initHandleCardClick() {
 		const {$board} = this;
 		const self = this;
@@ -156,8 +181,7 @@ class MemoryGame {
 			// before they can continue to click
 			const {viewingShownCards} = self.state;
 			if (viewingShownCards) return;
-
-			// TODO: if 2 cards are shown, users can not click another cards until open cards are closed.
+			
 			const {isFirstCard} = self.state;
 			if (isFirstCard) {
 				// Show the card
@@ -199,7 +223,9 @@ class MemoryGame {
 					self.renderRemainingCards();
 
 					// If the remaining card is 0, then we should inform users that they win
-					if (self.state.totalNumberOfHiddenCard === 0) swal("Good job!", "You opened all the cards!", "success");
+					if (self.state.totalNumberOfHiddenCard === 0) {
+						self.showCongratulations();
+					}
 
 					// Reset the state
 					self.state.isFirstCard = true;
